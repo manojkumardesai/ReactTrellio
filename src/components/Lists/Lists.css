@@ -1,0 +1,7 @@
+.Lists {
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px solid #ccc; 
+}
