@@ -1,0 +1,7 @@
+.Tasks {
+    display: inline-block;
+    width: 150px;
+    margin: 10px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px solid #ccc; 
+}
