@@ -76,7 +76,7 @@ const reducer = (state = initialState, action) => {
         case 'DRAGDROP':
             const droppedTask = JSON.parse(action.event.dataTransfer.getData('sourceList', action.prop));
             const changeTaskList = [...state.tasks];
-            const toBeChanged = changeTaskList.filter(task => task.id == droppedTask.id);
+            const toBeChanged = changeTaskList.filter(task => task.id === droppedTask.id);
             toBeChanged[0].listId = action.prop;
             return {
                 ...state,
