@@ -78,7 +78,6 @@ const reducer = (state = initialState, action) => {
             const changeTaskList = [...state.tasks];
             const toBeChanged = changeTaskList.filter(task => task.id == droppedTask.id);
             toBeChanged[0].listId = action.prop;
-            debugger;
             return {
                 ...state,
                 tasks: changeTaskList

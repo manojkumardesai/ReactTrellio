@@ -14,16 +14,17 @@ class ReactListContainer extends Component {
                         userTasks = this.props.task.filter((tsk) => tsk.listId === usrList.id);
                     }
                     return (
-                    <Lists key={usrList.id} 
-                           label="Add Task" 
-                           tasks={userTasks ? userTasks : []}
-                           user={usrList}
-                           clicked={this.props.onAddTask}
-                           dragOverHere={this.props.onDragOver}
-                           dragStartHere={this.props.onDragStart}
-                           dragDropHere={this.props.onDrop}
-                           ></Lists>
-                )})}
+                        <Lists key={usrList.id}
+                            label="Add Task"
+                            tasks={userTasks ? userTasks : []}
+                            user={usrList}
+                            clicked={this.props.onAddTask}
+                            dragOverHere={this.props.onDragOver}
+                            dragStartHere={this.props.onDragStart}
+                            dragDropHere={this.props.onDrop}
+                        ></Lists>
+                    )
+                })}
             </div>
         );
     }
@@ -42,7 +43,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        initialize: () => dispatch({ type: 'INIT'}),
+        initialize: () => dispatch({ type: 'INIT' }),
         onAddList: () => dispatch({ type: 'ADDLIST', listName: 'List 1' }),
         onDeleteList: () => dispatch({ type: 'DELETELIST', listName: 'List 1' }),
         onAddTask: (listId) => dispatch({ type: 'ADDTASK', listId: listId }),
